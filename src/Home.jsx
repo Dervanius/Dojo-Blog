@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
+import Spinner from "./Spinner";
 
 const Home = () => {
   const [blogs, setBlogs] = useState(null);
@@ -30,7 +31,8 @@ const Home = () => {
   return (
     <div className="home">
       {error && <div>{error}</div>}
-      {isPending && <div>Loading...</div>}
+      {/* {isPending && <div style={{ margin: "0 auto" }}>Loading...</div>} */}
+      {isPending && <Spinner />}
       {blogs && <BlogList blogs={blogs} title="All Blogs!" />}
     </div>
   );
