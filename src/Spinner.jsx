@@ -5,11 +5,10 @@ const Spinner = () => {
     display: "block",
     margin: "0 auto",
     borderColor: "#f1356d",
-    //backgroundColor: "blue",
   };
   return (
     <div className="sweet-loading">
-      <ClipLoader cssOverride={override} size={100} />
+      <ClipLoader cssOverride={override} size={120} />
     </div>
   );
 };
